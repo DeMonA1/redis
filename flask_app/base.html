@@ -1,0 +1,14 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}URL_short{% endblock %}
+
+{% block content %}
+<div>
+    {{ wtf.quick_form(form) }}
+    
+    {% if short_url %}
+    <div>
+        <span>Short URL:<a href="{{ full_url }}">{{ short_url }}</a> </span>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
